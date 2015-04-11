@@ -1,0 +1,48 @@
+body {
+  padding: 50px;
+  color: #51585e;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.bg-light {
+  background-color: #f8f9fb;
+}
+
+.bg-dark {
+  background-color: #1d232b;
+}
+
+.header {
+  background-color: #1d232b;
+  color: #fff;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+form {
+  padding: 1em;
+  margin: 1em;
+}
+
+input {
+  padding: 1em;
+  margin: 1em;
+  width: 30em;
+}
+
+label {
+  display: block;
+  width: 30em;
+}
+
+button.btn-big {
+  padding: 1em;
+  margin: 1em;
+  background-color: #1d232b;
+  color: #fff;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "codecritic-test-good",
+  "dependencies": {
+    "colors": "*"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "codecritic-test-bad",
+  "dependencies": {
+    "colors": "1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "2.1.4"
+  }
+}

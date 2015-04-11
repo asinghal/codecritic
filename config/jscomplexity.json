@@ -1,0 +1,9 @@
+{
+  "minMaintainabilityIndex": 95,
+  "maxCyclomatic": 5,
+  "maxHDifficulty": 20,
+  "maxHVolume": 500,
+  "maxHEffort": 4000,
+  "maxBugDensity": 0.1,
+  "maxLines": 300
+}

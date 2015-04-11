@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.bg-light
+    form(method="POST",action="/projects")
+      div.row
+        label="Project Name"
+        input(type="text", name="projectName")
+      div.row
+        label="Git URL"
+        input(type="text", name="gitUrl")
+      div.row
+        input(type="submit", value="Add Project")
