@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #777;
 }
 
 .bg-light {
@@ -46,3 +46,91 @@ button.btn-big {
   background-color: #1d232b;
   color: #fff;
 }
+
+.rating {
+  border-radius: 5px;
+  width: 2em;
+}
+
+.big-rating {
+  padding: 1em;
+  font-weight: bold;
+}
+
+.rating-5 {
+  background-color: #005C00;
+  color: #fff;
+}
+
+.rating-4 {
+  background-color: #54B554;
+  color: #fff;
+}
+
+.rating-3 {
+  background-color: #E6B800;
+  color: #fff;
+}
+
+.rating-2 {
+  background-color: #FF9900;
+  color: #fff;
+}
+
+.rating-1 {
+  background-color: #660000;
+  color: #fff;
+}
+
+.container {
+  padding: 1em;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
+
+th, td {
+  border-bottom: #ccc 1px dotted;
+  border-right: #ccc 1px dotted;
+  padding: 0.25em;
+  text-align: left;
+}
+
+h2 {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+section.summary {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px dotted #ccc;
+}
+
+
+.tile {
+  padding: 1em;
+  margin: 0.5em;
+  width: 10em;
+  display: inline-block;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #0099CC;
+}
+
+.source-code {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 1em; 
+}
+/*
+.source-code li {
+  padding: 0 1em;
+  border-bottom: 1px solid #eee;
+}
+*/

@@ -1,0 +1,77 @@
+extends layout
+
+block content
+  div.bg-light.container
+    a(href="/")="Home"
+    span=" >> "
+    a(href="/projects")=data.projectName
+    h1=data.file
+    h2.rating.big-rating(class="rating-#{data.rating}")=data.rating
+    div
+      div.tile
+        span="Complexity: "
+        span=data.complexity.errors.length
+      div.tile
+        span="Security: "
+        span=data.security.length
+      div.tile
+        span="Lint: "
+        span=data.jshint.length
+      div.tile
+        span="Duplicates: "
+        span=data.duplicates.length
+    div
+      if data.complexity.errors.length
+        section.summary
+          h2="Complexity"
+          table
+            tr
+              th="Function"
+              th="Line number"
+              th="Message"
+            - each err in data.complexity.errors
+              tr
+                td=err.name
+                td=err.position
+                td=err.msg
+      if data.security.length
+        section.summary
+          h2="Security"
+          table
+            tr
+              th="Message"
+              th="Line Number"
+            - each err in data.security
+              tr
+                td=err.rule.desc
+                td=err.line
+      if data.jshint.length
+        section.summary
+          h2="Lint"
+          table
+            tr
+              th="Message"
+              th="Line number"
+              th="Column number"
+            - each err in data.jshint
+              tr
+                td=err.msg
+                td=err.line
+                td=err.col
+      if data.duplicates.length
+        section.summary
+          h2="Code Duplication"
+          table
+            tr
+              th="Message"
+            - each err in data.duplicates
+              tr
+                td=err.title
+              - for(var file in err.files)
+                tr
+                  td=err.files[file]
+              tr
+                td
+                  pre=err.buffer
+    div.source-code
+      pre(class="brush: js;")=data.srcCode

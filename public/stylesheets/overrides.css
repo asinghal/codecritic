@@ -1,0 +1,8 @@
+
+.syntaxhighlighter {
+  padding: 1em 0;
+}
+
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: #E6B800 !important;
+}

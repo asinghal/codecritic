@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  div.bg-light.container
+    a(href="/")="Home"
+    h1=data.projectName
+    h2.rating.big-rating(class="rating-#{Math.floor(data.score)}")=data.score
+    section.summary
+      h2="Files"
+      table
+        tr
+          th="File"
+          th="Complexity Issues"
+          th="Security Issues"
+          th="Lint Issues"
+          th="Duplicate Code"
+          th="Rating"
+        - each report in data.files
+          tr
+            td
+              a(href="/files/#{report.fileNum}")=report.file
+            td=report.complexity.errors.length
+            td=report.security.length
+            td=report.jshint.length
+            td=report.duplicates.length
+            td.rating(class="rating-#{report.rating}")=report.rating
+    section.summary
+      h2="Dependencies"
+      table
+        tr
+          th="Name"
+          th="Required"
+          th="Stable"
+          th="Latest"
+        - each report in data.dependencies.prod
+          tr
+            td=report.name
+            td=report.versions.required
+            td=report.versions.stable
+            td=report.versions.latest
+        - each report in data.dependencies.dev
+          tr
+            td=report.name
+            td=report.versions.required
+            td=report.versions.stable
+            td=report.versions.latest

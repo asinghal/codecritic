@@ -1,7 +1,8 @@
 {
   "name": "codecritic-test-good",
   "dependencies": {
-    "colors": "*"
+    "colors": "*",
+    "scanjs": "mozilla/scanjs"
   },
   "devDependencies": {
     "mocha": "*"
