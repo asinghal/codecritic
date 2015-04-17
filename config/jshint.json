@@ -20,6 +20,7 @@
   "predef": [
     "angular",
     "_",
+    "window",
     "describe",         // Used by mocha
     "it",               // Used by mocha
     "before",           // Used by mocha

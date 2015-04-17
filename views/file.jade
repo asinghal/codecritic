@@ -69,9 +69,46 @@ block content
                 td=err.title
               - for(var file in err.files)
                 tr
-                  td=err.files[file]
+                  td
+                    span=err.files[file].file
+                    span=" "
+                    span=err.files[file].line
               tr
                 td
                   pre=err.buffer
     div.source-code
       pre(class="brush: js;")=data.srcCode
+
+    script(type="text/javascript").
+      var errors = [];
+
+    - each err in data.complexity.errors
+        script(type="text/javascript").
+          errors.push({ line: '#{err.position}', message: unescape('#{escape(err.msg)}') });
+    - each err in data.jshint
+        script(type="text/javascript").
+          errors.push({ line: '#{err.line}', message: unescape('#{escape(err.msg)}')  });
+    - each err in data.security
+        script(type="text/javascript").
+          errors.push({ line: '#{err.line}', message: unescape('#{escape(err.rule.desc)}') });
+    - each err in data.duplicates
+      - data.fileIndex = [];
+      - Object.keys(err.files).forEach(function(key) {
+        - if (data.fileIndex.indexOf(key) === -1 && err.files[key].file.trim() === data.file.trim()) {
+          - data.fileIndex.push(key);
+        - }
+      - });
+      - each index in data.fileIndex
+        - if (err.files[index])
+          script(type="text/javascript").
+            errors.push({ line: '#{err.files[index].line}', message: unescape('#{escape(err.title)}') });
+
+    script(type="text/javascript").
+      $(document).ready(function() {
+        setTimeout(function() {
+          errors.forEach(function(err) {
+            $('.line.number' + err.line).addClass('highlight');
+            $('.line.number' + err.line + ':last').append('<span class="error-msg"> <- ' + err.message + '</span>');
+          });
+        }, 500);
+      });
