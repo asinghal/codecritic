@@ -1,0 +1,149 @@
+{
+    "files": [
+        {
+            "file": "lib/critic.js",
+            "complexity": {
+                "functions": [
+                    {
+                        "position": 19,
+                        "name": "applicableIssues",
+                        "cyclomatic": 1,
+                        "difficulty": 3.666666666666667,
+                        "volume": 78.13781191217038,
+                        "effort": 286.5053103446247,
+                        "bugs": 0.026045937304056792
+                    },
+                    {
+                        "position": 21,
+                        "name": "<anonymous>",
+                        "cyclomatic": 2,
+                        "difficulty": 3.2142857142857144,
+                        "volume": 60.94436251225966,
+                        "effort": 195.89259378940605,
+                        "bugs": 0.020314787504086555
+                    },
+                    {
+                        "position": 34,
+                        "name": "organize",
+                        "cyclomatic": 1,
+                        "difficulty": 7.6,
+                        "volume": 150.11730005192322,
+                        "effort": 1140.8914803946163,
+                        "bugs": 0.05003910001730774
+                    },
+                    {
+                        "position": 35,
+                        "name": "<anonymous>",
+                        "cyclomatic": 2,
+                        "difficulty": 8,
+                        "volume": 171.90318620677482,
+                        "effort": 1375.2254896541986,
+                        "bugs": 0.05730106206892494
+                    },
+                    {
+                        "position": 46,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 2.888888888888889,
+                        "volume": 88.81055323538621,
+                        "effort": 256.56382045778236,
+                        "bugs": 0.029603517745128736
+                    },
+                    {
+                        "position": 47,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 1.875,
+                        "volume": 22.458839376460833,
+                        "effort": 42.11032383086406,
+                        "bugs": 0.007486279792153611
+                    },
+                    {
+                        "position": 66,
+                        "name": "evaluateJS",
+                        "cyclomatic": 1,
+                        "difficulty": 4,
+                        "volume": 69.76048999263462,
+                        "effort": 279.04195997053847,
+                        "bugs": 0.02325349666421154
+                    },
+                    {
+                        "position": 68,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 2.4,
+                        "volume": 31.699250014423125,
+                        "effort": 76.07820003461549,
+                        "bugs": 0.010566416671474375
+                    },
+                    {
+                        "position": 69,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 0.625,
+                        "volume": 13.931568569324174,
+                        "effort": 8.707230355827608,
+                        "bugs": 0.004643856189774725
+                    },
+                    {
+                        "position": 74,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 1.7999999999999998,
+                        "volume": 27,
+                        "effort": 48.599999999999994,
+                        "bugs": 0.009
+                    },
+                    {
+                        "position": 77,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 1.25,
+                        "volume": 18.094737505048094,
+                        "effort": 22.61842188131012,
+                        "bugs": 0.006031579168349364
+                    },
+                    {
+                        "position": 80,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 1.75,
+                        "volume": 31.699250014423125,
+                        "effort": 55.47368752524047,
+                        "bugs": 0.010566416671474375
+                    },
+                    {
+                        "position": 83,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 1.7999999999999998,
+                        "volume": 27,
+                        "effort": 48.599999999999994,
+                        "bugs": 0.009
+                    },
+                    {
+                        "position": 86,
+                        "name": "<anonymous>",
+                        "cyclomatic": 1,
+                        "difficulty": 4.3125,
+                        "volume": 169.4584015082173,
+                        "effort": 730.789356504187,
+                        "bugs": 0.05648613383607243
+                    }
+                ],
+                "errors": []
+            },
+            "security": [],
+            "jshint": [],
+            "duplicates": [],
+            "rating": 5,
+            "fileNum": 1
+        }
+    ],
+    "dependencies": {
+        "prod": [],
+        "dev": []
+    },
+    "score": 5,
+    "projectName": "codecritic"
+}

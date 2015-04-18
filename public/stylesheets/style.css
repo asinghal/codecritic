@@ -116,7 +116,7 @@ section.summary {
 .tile {
   padding: 1em;
   margin: 0.5em;
-  width: 10em;
+  width: 8em;
   display: inline-block;
   font-size: 1.5em;
   color: #fff;
@@ -145,4 +145,33 @@ section.summary {
   background-color: #f9f2f4;
   padding: 5px;
   margin: 5px;
+}
+
+.coverage-red {
+  color: red;
+}
+
+.coverage-amber {
+  color: orange;
+}
+
+.coverage-green {
+  color: green;
+}
+
+.coverage-bg-red {
+  background-color: red;
+}
+
+.coverage-bg-amber {
+  background-color: orange;
+}
+
+.coverage-bg-green {
+  background-color: green;
+}
+
+.syntaxhighlighter .line.alt1.no-coverage, 
+.syntaxhighlighter .line.alt2.no-coverage {
+  background-color: #660000;
 }

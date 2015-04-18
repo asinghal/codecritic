@@ -8,11 +8,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var multer = require('multer');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var projects = require('./routes/projects');
 var files = require('./routes/files');
+var coverage = require('./routes/coverage');
 
 var app = express();
 
@@ -34,11 +36,15 @@ app.use(session({
   saveUninitialized: true,
   secret: 'uwotm8'
 }));
+app.use(multer({
+  dest: './uploads/'
+}));
 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/projects', projects);
 app.use('/files', files);
+app.use('/coverage', coverage);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -19,6 +19,7 @@
     "jade": "~1.9.2",
     "jshint": "^2.6.3",
     "morgan": "~1.5.1",
+    "multer": "^0.1.8",
     "oauth": "^0.9.12",
     "scanjs": "mozilla/scanjs",
     "semver": "^4.3.3",
