@@ -6,20 +6,24 @@ block content
     h1=data.projectName
     h2.rating.big-rating(class="rating-#{Math.floor(data.score)}")=data.score
     section.coverage
-      h2="Code Coverage"
       - if (!data.coverageSummary)
+        h2="Code Coverage"
         div
+          p="You can upload your coverage.json file here and include that in analysis."
           form(action="/coverage",method="POST", enctype="multipart/form-data")
             input(type="file", name="coverage")
-            input(type="submit", name="Upload")
+            input(type="submit", name="Upload", value="Upload")
       - else
-        h3(class="coverage-#{data.coverageSummary.statements.status}")=(data.coverageSummary.statements.pct + " %")
+        h2
+          span="Code Coverage: "
+          span(class="coverage-#{data.coverageSummary.statements.status}")=(data.coverageSummary.statements.pct + " %")
     section.summary
       h2="Files"
       table
         tr
           th="File"
-          th="Coverage %"
+          - if (data.coverageSummary)
+            th="Coverage %"
           th="Complexity Issues"
           th="Security Issues"
           th="Lint Issues"
@@ -29,10 +33,11 @@ block content
           tr
             td
               a(href="/files/#{report.fileNum}")=report.file
-            - if (report.coverage)
-              td(class="coverage-#{report.coverage.summary.statements.status}")=report.coverage.summary.statements.pct
-            - else
-              td(class="coverage-red")=0
+            - if (data.coverageSummary)
+              - if (report.coverage)
+                td(class="coverage-#{report.coverage.summary.statements.status}")=report.coverage.summary.statements.pct
+              - else
+                td(class="coverage-red")=0
             td=report.complexity.errors.length
             td=report.security.length
             td=report.jshint.length

@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  div.bg-light
+  div.bg-light.container
     form(method="POST",action="/projects")
       div.row
         label="Project Name"
@@ -11,3 +11,12 @@ block content
         input(type="text", name="gitUrl")
       div.row
         input(type="submit", value="Add Project")
+    div
+      h2="Existing projects"
+      table
+        tr
+          th="Project"
+        - each project in data
+          tr
+            td
+              a(href="/projects/#{project.key}")=project.key
