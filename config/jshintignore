@@ -4,3 +4,4 @@
 ../**/coverage/**/*.js
 ../**/test/**/*.js
 ../**/tests/**/*.js
+../**/dist/**/*.js
